@@ -1,5 +1,9 @@
 <style scoped lang="scss">
   .badge {
+    &.unsigned_by_supplier {
+      background-color: $purple;
+    }
+
     &.waiting_signature {
       background-color: $greyish-brown;
     }
@@ -75,6 +79,8 @@
 
         template(v-else-if="contract.refused_by_class == 'supplier'")
           span {{ $t('.refused.at', { value: contract.refused_by_at }) }}
+        template(v-else-if="contract.status == 'unsigned_by_supplier'")
+          span {{ $t('.signatures.not_signed') }}
         template(v-else)
           span {{ contract.supplier_signed_at || $t('.signatures.waiting') }}
 
@@ -174,8 +180,13 @@
         return !!this.contract.supplier_signed_at
       },
 
+      unsignedBySupplierStatus() {
+        let status = this.contract.status
+        return status && status == "unsigned_by_supplier"
+      },
+
       canSign() {
-        return !this.refusedStatus && !this.supplierSigned
+        return !this.refusedStatus && !this.supplierSigned && !this.unsignedBySupplierStatus
       },
     },
 
