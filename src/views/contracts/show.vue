@@ -185,8 +185,12 @@
         return status && status == "unsigned_by_supplier"
       },
 
+      biddingStatus() {
+        return this.contract.bidding_status
+      },
+
       canSign() {
-        return !this.refusedStatus && !this.supplierSigned && !this.unsignedBySupplierStatus
+        return !this.refusedStatus && !this.supplierSigned && !this.unsignedBySupplierStatus && this.biddingStatus == 'finnished'
       },
     },
 
