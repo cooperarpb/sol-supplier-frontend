@@ -11,7 +11,8 @@
         name="lot_question[question]",
         :label="$t('.form.fields.question_label')",
         :error="errors.question",
-        require=true
+        require=true,
+        :rows="10"
       )
 
       button.button-submit.button-long.u-full-width(
