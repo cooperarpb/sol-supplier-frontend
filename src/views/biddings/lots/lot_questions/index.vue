@@ -7,16 +7,20 @@
       router-link.button.button-primary.router-link.mt-2.mb-2.u-full-width(:to="{ name: 'NewLotQuestion', params: { bidding_id: this.biddingId, lot_id: this.lotId } }")
         | {{ $t('.button.new_lot_question') }}
 
-    .card.slim.mb-2.mt-2
+    .card.slim.mb-2.mt-2(v-if="this.lotQuestionsCount > 0")
       ul.mb-0
-        li.list-item.row.p-1(v-for="lot_question in lot_questions", key="lot_question.question")
+        li.list-item.row.p-1(v-for="lotQuestion in this.lotQuestions", key="lot_question.question")
           .container
             .list-title
-              | {{ lot_question.question }}
-            span(v-if="lot_question.answer")
-              | {{ lot_question.answer }}
+              | {{ lotQuestion.question }}
+            span(v-if="lotQuestion.answer")
+              | {{ lotQuestion.answer }}
             span(v-else)
               | {{ $t('.waiting_answer') }}
+
+    span(v-if="this.lotQuestionsCount == 0")
+      | {{ $t('.no_lot_questions') }}
+
 </template>
 
 <script>
@@ -26,9 +30,26 @@
     data () {
       return {
         i18nScope: 'biddings.lots.lot_questions.index',
-        lot_questions: null,
+        lotQuestions: null,
+        lotQuestionsCount: 0,
         isLoading: true,
-        bidding: {}
+        bidding: {},
+
+        tabs: [
+          {
+            route: { name: 'bidding', params: {} },
+            icon: 'fa-file',
+            text: this.$t('models.bidding.one'),
+            active: true,
+          },
+
+          {
+            route: { name: 'lots', params: {} },
+            icon: 'fa-list',
+            text: this.$t('biddings.tabs.lots'),
+            active: false,
+          }
+        ]
       }
     },
 
@@ -38,8 +59,12 @@
 
         return this.$http.get('/supplier/biddings/' + this.biddingId + '/lots/' + this.lotId + '/lot_questions')
           .then((response) => {
-            this.lot_questions = response.data
+            this.lotQuestions = response.data
+            this.lotQuestionsCount = this.lotQuestions.length
             this.isLoading = false
+
+            this.updateTabs()
+            this.$emit('navbarTitleChanged', this.$t('.title'))
 
           }).catch((_err) => {
             this.error = _err
@@ -62,6 +87,14 @@
       parseRoute() {
         this.biddingId = this.$params.asInteger(this.$route.params.bidding_id)
         this.lotId = this.$params.asInteger(this.$route.params.lot_id)
+      },
+
+      updateTabs() {
+        // add resource id to router tab
+        this.tabs[0].route.params = { id: this.biddingId }
+        this.tabs[1].route.params = { bidding_id: this.biddingId }
+
+        this.$emit('tabChanged', this.tabs)
       },
 
       init() {

@@ -3,16 +3,24 @@ pt-BR:
     lots:
       lot_questions:
         index:
+          title: Esclarecimentos
+
           button:
             new_lot_question: Nova pergunta
+            
           waiting_answer: Aguardando resposta
+          no_lot_questions: Não há perguntas cadastradas
+
         new:
+          title: Novo esclarecimento
+
           button:
             submit: Enviar
             submitting: Enviando
           form:
             fields:
               question_label: Pergunta
+
           notifications:
             success: Esclarecimento criado com sucesso
             failure: Houve um erro ao criar o esclarecimento

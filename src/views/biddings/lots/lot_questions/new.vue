@@ -32,7 +32,23 @@
         i18nScope: 'biddings.lots.lot_questions.new',
         errors:  {},
         lot_question: {},
-        submitting: false
+        submitting: false,
+
+        tabs: [
+          {
+            route: { name: 'bidding', params: {} },
+            icon: 'fa-file',
+            text: this.$t('models.bidding.one'),
+            active: true,
+          },
+
+          {
+            route: { name: 'lots', params: {} },
+            icon: 'fa-list',
+            text: this.$t('biddings.tabs.lots'),
+            active: false,
+          }
+        ]
       }
     },
 
@@ -47,6 +63,9 @@
       parseRoute() {
         this.biddingId = this.$params.asInteger(this.$route.params.bidding_id)
         this.lotId = this.$params.asInteger(this.$route.params.lot_id)
+
+        this.changeTabs()
+        this.$emit('navbarTitleChanged', this.$t('.title'))
       },
 
       submit() {
@@ -70,6 +89,15 @@
             this.submitting = false
           })
       },
+
+      changeTabs() {
+        // add resource id to router tab
+        this.tabs[0].route.params = { id: this.biddingId }
+        this.tabs[1].route.params = { bidding_id: this.biddingId }
+
+        this.$emit('tabChanged', this.tabs)
+      },
+
 
       init() {
         this.parseRoute()
