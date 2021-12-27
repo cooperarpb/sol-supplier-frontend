@@ -3,7 +3,7 @@
 
 <template lang="pug">
   .container
-    form(ref="form", method="post", @submit.prevent="submit")
+    form(ref="form", method="post", @submit.prevent="confirmSubmit")
       input(type="hidden", name="lot_question[lot_id]", :value="this.lotId")
 
       textarea-field.mt-2(
@@ -66,6 +66,26 @@
 
         this.changeTabs()
         this.$emit('navbarTitleChanged', this.$t('.title'))
+      },
+
+      confirmSubmit() {
+        let message = {
+          title: this.$t('.confirm.title'),
+          body: this.$t('.confirm.body')
+        }
+
+        let options = {
+          cancelText: this.$t('.dialog.back'),
+          okText: this.$t('.dialog.confirm')
+        }
+
+        this.$dialog.confirm(message, options)
+          .then((dialog) => {
+            this.submit()
+          })
+          .catch(function (err) {
+            console.log(err)
+          });
       },
 
       submit() {
