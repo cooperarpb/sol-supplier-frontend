@@ -9,7 +9,7 @@
 
     .card.slim.mb-2.mt-2(v-if="this.lotQuestionsCount > 0")
       ul.mb-0
-        li.list-item.row.p-1(v-for="lotQuestion in this.lotQuestions", key="lot_question.question")
+        li.list-item.row.p-1(v-for="lotQuestion in this.lotQuestions")
           .container
             .list-title
               | {{ lotQuestion.question }}
