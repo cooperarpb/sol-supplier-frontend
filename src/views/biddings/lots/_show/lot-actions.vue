@@ -72,6 +72,10 @@
             i.fa.fa-spin.fa-spinner
             |  {{ $t('.proposal.importing.alert') }}
 
+    template
+      router-link.button.button-primary.router-link.mt-4.mb-0.u-full-width(:to="{ name: 'LotQuestions', params: { bidding_id: this.biddingId, lot_id: this.params.id } }")
+        | {{ $t('.button.lot_questions') }}
+
     proposal-import-overlay(:lot="lot", :showFileProposalOverlay="showFileProposalOverlay", :biddingId="biddingId", @closeOverlay="showFileProposalOverlay = false")
 
 </template>

@@ -29,6 +29,9 @@ import GlobalLots from '@/views/biddings/lots/indexg.vue'
 import NewLotProposal from '@/views/biddings/lots/lot_proposals/new.vue'
 import EditLotProposal from '@/views/biddings/lots/lot_proposals/edit.vue'
 
+import LotQuestions from '@/views/biddings/lots/lot_questions/index.vue'
+import NewLotQuestion from '@/views/biddings/lots/lot_questions/new.vue'
+
 import Proposals from '@/views/biddings/lots/proposals/index.vue'
 import Proposal from '@/views/biddings/lots/proposals/show.vue'
 
@@ -299,6 +302,28 @@ const routes = [
       transition: { name: 'slide-left' }
     }
   },
+
+  {
+    name:      'LotQuestions',
+    path:      '/biddings/:bidding_id/lots/:lot_id/lot_questions/index',
+    component: LotQuestions,
+    meta:      {
+      auth:       true,
+      back:       true,
+      transition: { name: 'slide-left' }
+    }
+  },
+
+  {
+    name:      'NewLotQuestion',
+    path:      '/biddings/:bidding_id/lots/:lot_id/lot_questions/new',
+    component: NewLotQuestion,
+    meta:      {
+      auth:       true,
+      back:       true,
+      transition: { name: 'slide-left' }
+    }
+  },  
 
   // TODO componetnes específicos para rotas específicas!
   // Rails tem ErrorsController, com páginas dinâmicas em rotas específicas:
