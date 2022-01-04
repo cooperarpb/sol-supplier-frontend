@@ -15,7 +15,7 @@ pt-BR:
           title: Novo esclarecimento
 
           confirm:
-            title: Deseja enviar a resposta?
+            title: Deseja enviar a pergunta?
             body: Após o envio, a pergunta não poderá ser alterada.
           dialog:
             back: Voltar
