@@ -263,18 +263,6 @@ export default {
     prefix: String,
   },
 
-  created() {
-    this.$http
-      .get("/search/states")
-      .then((response) => {
-        this.statesOptions = response.data;
-      })
-      .catch((_err) => {
-        this.error = _err;
-        console.error(_err);
-      });
-  },
-
   data() {
     return {
       i18nScope: "address.address-fields",
@@ -326,15 +314,33 @@ export default {
           this.isLoadingOverlay = false;
         });
     },
+
     addResult(result) {
       this.address.city_id = result.id;
       this.address.city_name = result.text;
       this.showOverlay = false;
     },
+
     onChange(event) {
       console.log(event.target.value, this.key);
+    },
+
+    fetchStates() {
+      this.$http
+        .get("/search/states")
+        .then((response) => {
+          this.statesOptions = response.data;
+        })
+        .catch((_err) => {
+          this.error = _err;
+          console.error(_err);
+        });
     }
   },
+
+  created() {
+    this.fetchStates()
+  }  
 };
 </script>
 
