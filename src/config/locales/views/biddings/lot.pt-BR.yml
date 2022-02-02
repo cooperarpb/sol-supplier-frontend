@@ -50,6 +50,7 @@ pt-BR:
           button:
             new_proposal: Preencher proposta
             new_global_proposal: Preencher proposta
+            lot_questions: Esclarecimentos
             new_proposal_from_file: Preencher proposta via planilha
 
         proposal-import-overlay:

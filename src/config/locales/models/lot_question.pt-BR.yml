@@ -1,0 +1,12 @@
+pt-BR:
+  models:
+    lot_question:
+      one: Esclarecimento
+      other: Esclarecimentos
+
+      attributes:
+        question: Pergunta
+
+      errors:
+        question:
+          missing: Pergunta não pode ficar em branco
