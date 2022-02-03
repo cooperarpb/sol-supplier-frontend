@@ -9,6 +9,7 @@ pt-BR:
         latitude: Latitude
         cityName: Município
         cityId: Município
+        state: Estado
         address: Logradouro
         number: Número
         neighborhood: Bairro
