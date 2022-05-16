@@ -1,0 +1,51 @@
+en-US:
+  biddings:
+    lots:
+      lot_attachments:
+        index:
+          title: Attachments
+
+          button:
+            new_lot_attachment: New attachment
+            remove: remove
+            feel: send
+            
+          no_lot_attachments: There are no attachments registered
+          sent_lot_attachment: Attachment sent
+
+          confirm:
+            delete:
+              title: Do you want to remove the attachment?
+              body: After removing, the attachment will no longer be available.
+            feel:
+              title: Do you want to send the attachment?
+              body: >
+                The attachment will be sent to the association, after sending it will no longer be possible
+                remove or change it.
+          dialog:
+            delete:
+              back: back
+              confirm: remove
+            feel:
+              back: back
+              confirm: send
+        new:
+          title: New attachment
+
+          confirm:
+            title: Do you want to send the attachment?
+            body: After submission, the attachment cannot be changed.
+          dialog:
+            back: back
+            confirm: send
+
+          button:
+            submit: submit
+            submitting: sending
+          form:
+            fields:
+              question_label: Attachment
+
+          notifications:
+            success: Attachment created successfully
+            failure: There was an error creating the attachment

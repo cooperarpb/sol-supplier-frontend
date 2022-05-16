@@ -51,6 +51,7 @@ pt-BR:
             new_proposal: Preencher proposta
             new_global_proposal: Preencher proposta
             lot_questions: Esclarecimentos
+            lot_attachments: Anexos
             new_proposal_from_file: Preencher proposta via planilha
 
         proposal-import-overlay:
