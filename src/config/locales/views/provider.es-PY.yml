@@ -48,3 +48,49 @@
         already_in_use: Proveedor registrado en el sistema con usuario para acceso. Ingrese otro documento o acceda al sistema con su nombre de usuario y contraseña.
         text1: Información prerregistrada para el documento
         text2: Valide la información y continúe con el registro.
+
+    edit:
+      title: Perfil
+      general:
+        title: Datos del proveedor
+
+      languages: Idioma
+      
+      locale:
+        spanish: español
+        english: inglés
+        portuguese: portugués
+        french: francés
+
+      legal_representative:
+        title: Representante Legal
+
+      labels:
+        provider_type: Tipo de persona (PF/PJ)
+        cpf: Introduzca el CPF
+        cnpj: Introduzca el CNPJ
+        document: Documento
+
+      users:
+        title: Usuario de inicio de sesión
+
+      fields:
+        name:
+          placeholder: Ingrese el nombre del proveedor
+        cnpj:
+          placeholder: Introduzca el documento
+
+      button:
+        submit: actualizar
+        submitting: Actualizando...
+        find: siguiente
+        finding: Validando...
+        add: agregar
+        ok: Entendi
+
+      notifications:
+        success: ¡Actualización exitosa! ¡Usa tus datos para acceder!
+        failure: Hubo un error al actualizar el registro. Revisa los campos a continuación
+        already_in_use: Proveedor registrado en el sistema con usuario para acceso. Ingresa otro documento o accede al sistema con tu usuario y contraseña.
+        text1: Información pre-registrada para el documento
+        text2: Por favor valide la información y proceda con el registro.

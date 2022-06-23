@@ -48,3 +48,49 @@
         already_in_use: Vendor registered in the system with user for access. Enter another document or access the system with your username and password.
         text1: Pre-registered information for the document
         text2: Please validate the information and proceed with the registration.
+
+    edit:
+      title: Profile
+      general:
+        title: Supplier data
+
+      languages: Language
+      
+      locale:
+        spanish: spanish
+        english: english
+        portuguese: Português
+        french: Portuguese
+
+      legal_representative:
+        title: Legal Representative
+
+      labels:
+        provider_type: Person type (PF/PJ)
+        cpf: Enter the CPF
+        cnpj: Inform the CNPJ
+        document: document
+
+      users:
+        title: Login User
+
+      fields:
+        name:
+          placeholder: Enter the name of the supplier
+        CNPJ:
+          placeholder: Enter the document
+
+      button:
+        submit: update
+        submitting: Updating...
+        find: next
+        finding: Validating...
+        add: add
+        ok: I got it
+
+      notifications:
+        success: Update successful! Use your data to access!
+        failure: There was an error updating the registration. Check the fields below
+        already_in_use: Supplier registered in the system with user for access. Enter another document or access the system with your username and password.
+        text1: Pre-registered information for the document
+        text2: Please validate the information and proceed with the registration.
