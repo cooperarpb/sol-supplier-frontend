@@ -311,9 +311,10 @@
     created: function () {
       this.fetchUnreadsCount();
 
+      // Cliente solicitou configurar a cada 5 minutos.
       this.interval = setInterval(function () {
         this.fetchUnreadsCount();
-      }.bind(this), 10000);
+      }.bind(this), 300000); 
     },
 
     beforeDestroy: function(){
