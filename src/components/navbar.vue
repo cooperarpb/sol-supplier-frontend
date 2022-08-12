@@ -319,9 +319,11 @@
     //   }.bind(this), 300000);
     // },
 
-    beforeDestroy: function(){
-      clearInterval(this.interval);
-    },
+    // XXX: Código comentado temporiariamente até ser realizado
+    // o ajuste na performance de notificações
+    // beforeDestroy: function(){
+    //   clearInterval(this.interval);
+    // },
 
     // XXX: Código comentado temporiariamente até ser realizado
     // o ajuste na performance de notificações
