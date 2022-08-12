@@ -308,24 +308,28 @@
       }
     },
 
-    created: function () {
-      this.fetchUnreadsCount();
+    // XXX: Código comentado temporiariamente até ser realizado
+    // o ajuste na performance de notificações
+    // created: function () {
+    //   this.fetchUnreadsCount();
 
-      // Cliente solicitou configurar a cada 5 minutos.
-      this.interval = setInterval(function () {
-        this.fetchUnreadsCount();
-      }.bind(this), 300000); 
-    },
+    //   // Cliente solicitou configurar a cada 5 minutos.
+    //   this.interval = setInterval(function () {
+    //     this.fetchUnreadsCount();
+    //   }.bind(this), 300000);
+    // },
 
     beforeDestroy: function(){
       clearInterval(this.interval);
     },
 
-    watch:{
-      $route (to, from){
-        this.fetchUnreadsCount();
-      }
-    }
+    // XXX: Código comentado temporiariamente até ser realizado
+    // o ajuste na performance de notificações
+    // watch:{
+    //   $route (to, from){
+    //     this.fetchUnreadsCount();
+    //   }
+    // }
   }
 
 </script>
