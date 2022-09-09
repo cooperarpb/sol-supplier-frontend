@@ -122,10 +122,10 @@ ul {
       )
 
     .two.columns
-      select-field#state(
+      select-field(:id="stateSelectId")(
         name="special",
         label="Selecione o Estado",
-        value="1",
+        :value="selectedStateValue",
         :options="statesOptions",
         :placeholder="$t('.something')",
         require,
@@ -261,6 +261,7 @@ export default {
     errors: Object,
     errorPrefix: { String, default: "" },
     prefix: String,
+    stateSelectIdProp: String,
   },
 
   data() {
@@ -275,6 +276,22 @@ export default {
       stateOptionsId: 0,
       selectedState: null
     };
+  },
+
+  computed: {
+    stateSelectId() {
+      return this.stateSelectIdProp || 'state'
+    },
+
+    selectedStateValue() {
+      this.selectedState = this.address.state_id
+
+      if (this.selectedState === undefined || this.selectedState == null) {
+        return '1'
+      }
+
+      return this.selectedState
+    }
   },
 
   methods: {
@@ -298,7 +315,7 @@ export default {
 
       let params = oParams;
 
-      let state_id = document.getElementById('state').value
+      let state_id = document.getElementById(this.stateSelectId).value
 
       this.$http
         .get(`/search/states/${state_id}/cities`, { params: params })
