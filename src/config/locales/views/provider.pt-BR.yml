@@ -48,3 +48,50 @@ pt-BR:
         already_in_use: Fornecedor cadastrado no sistema com usuário para acesso. Informe outro documento ou acesse o sistema com seu usuário e senha.
         text1: Informações pré-cadastradas para o documento
         text2: Por favor valide as informações e prossiga com o cadastro.
+
+    edit:
+      title: Perfil
+      general:
+        title: Dados do fornecedor
+
+      languages: Idioma
+      
+      locale:
+        spanish: Espanhol
+        english: Inglês
+        portuguese: Português
+        french: Francês
+
+      legal_representative:
+        title: Representante Legal
+
+      labels:
+        provider_type: Tipo de pessoa (PF/PJ)
+        cpf: Informe o CPF
+        cnpj: Informe o CNPJ
+        document: Documento
+
+      users:
+        title: Usuário de acesso
+
+      fields:
+        name:
+          placeholder: Informe o nome do fornecedor
+        cnpj:
+          placeholder: Informe o documento
+
+      button:
+        submit: Atualizar
+        submitting: Atualizando...
+        find: Próximo
+        finding: Validando...
+        add: Adicionar
+        ok: Entendi
+
+      notifications:
+        success: Atualização realizada com sucesso! Utilize seus dados para acessar!
+        failure: Houve um erro ao atualizar o cadastro. Verifique os campos abaixo
+        already_in_use: Fornecedor cadastrado no sistema com usuário para acesso. Informe outro documento ou acesse o sistema com seu usuário e senha.
+        text1: Informações pré-cadastradas para o documento
+        text2: Por favor valide as informações e prossiga com o cadastro.
+

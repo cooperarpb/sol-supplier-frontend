@@ -1,0 +1,51 @@
+es-PY:
+  biddings:
+    lots:
+      lot_attachments:
+        index:
+          title: Archivos adjuntos
+
+          button:
+            new_lot_attachment: Nuevo archivo adjunto
+            remove: quitar
+            sent: enviar
+            
+          no_lot_attachments: No hay archivos adjuntos registrados
+          sent_lot_attachment: Archivo adjunto enviado
+
+          confirm:
+            delete:
+              title: ¿Desea eliminar el archivo adjunto?
+              body: después de eliminarlo, el archivo adjunto ya no estará disponible.
+            sent:
+              title: ¿Desea enviar el archivo adjunto?
+              body: >
+                El archivo adjunto se enviará a la asociación, después de enviarlo ya no será posible
+                eliminarlo o cambiarlo.
+          dialog:
+            delete:
+              back: atras
+              confirm: eliminar
+            sent:
+              back: atras
+              confirm: enviar
+        new:
+          title: Nuevo archivo adjunto
+
+          confirm:
+            title: ¿Desea enviar el archivo adjunto?
+            body: después del envío, el archivo adjunto no se puede cambiar.
+          dialog:
+            back: atras
+            confirm: Enviar
+
+          button:
+            submit: Enviar
+            submitting: Enviando
+          form:
+            fields:
+              question_label: Adjunto
+
+          notifications:
+            success: Adjunto creado con éxito
+            failure: hubo un error al crear el archivo adjunto

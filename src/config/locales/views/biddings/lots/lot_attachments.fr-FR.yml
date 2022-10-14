@@ -1,0 +1,51 @@
+fr-FR:
+  biddings:
+    lots:
+      lot_attachments:
+        index:
+          title: Pièces jointes
+
+          button:
+            new_lot_attachment: nouvelle pièce jointe
+            remove: supprimer
+            sent: envoyer
+            
+          no_lot_attachments: il n'y a pas de pièces jointes enregistrées
+          sent_lot_attachment: pièce jointe envoyée
+
+          confirm:
+            delete:
+              title: Voulez-vous supprimer la pièce jointe?
+              body: après la suppression, la pièce jointe ne sera plus disponible.
+            sent:
+              title: Voulez-vous envoyer la pièce jointe?
+              body: >
+                La pièce jointe sera envoyée à l'association, après envoi elle ne sera plus possible
+                supprimez-le ou modifiez-le.
+          dialog:
+            delete:
+              back: retour
+              confirm: supprimer
+            sent:
+              back: retour
+              confirm: envoyer
+        new:
+          title: Nouvelle pièce jointe
+
+          confirm:
+            title: Voulez-vous envoyer la pièce jointe ?
+            body: après la soumission, la pièce jointe ne peut pas être modifiée.
+          dialog:
+            back: retour
+            confirm: envoyer
+
+          button:
+            submit: soumettre
+            submitting: envoi
+          form:
+            fields:
+              question_label: pièce jointe
+
+          notifications:
+            success: pièce jointe créée avec succès
+            failure: une erreur s'est produite lors de la création de la pièce jointe

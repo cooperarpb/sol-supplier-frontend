@@ -74,7 +74,7 @@
 
           input(type="hidden", v-model="provider.type", name="provider[type]")
 
-          AddressFields(:errors="errorsAddress" prefix="provider" :address="address")
+          AddressFields(:errors="errorsAddress" prefix="provider" :address="address" stateSelectIdProp="state-1")
 
           hr
           h4.title
@@ -138,7 +138,7 @@
             :error="errorsLegalRepresentative['legal_representative.valid_until']"
           )
 
-          AddressFields(:errors="errorsLegalRepresentativeAddress" prefix="provider[legal_representative_attributes]"  :address="legal_representative_address" errorPrefix="legal_representative.")
+          AddressFields(:errors="errorsLegalRepresentativeAddress" prefix="provider[legal_representative_attributes]"  :address="legal_representative_address" errorPrefix="legal_representative." stateSelectIdProp="state-2")
 
           hr
           h4.title

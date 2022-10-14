@@ -1,0 +1,51 @@
+pt-BR:
+  biddings:
+    lots:
+      lot_attachments:
+        index:
+          title: Anexos
+
+          button:
+            new_lot_attachment: Novo anexo
+            remove: Remover
+            sent: Enviar
+            
+          no_lot_attachments: Não há anexos cadastrados
+          sent_lot_attachment: Anexo enviado
+
+          confirm:
+            delete:
+              title: Deseja remover o anexo?
+              body: Após remover, o anexo não estará mais disponível.
+            sent:
+              title: Deseja enviar o anexo?
+              body: >
+                O anexo será enviado à associação, após o envio não será mais possível
+                removê-lo ou alterá-lo.
+          dialog:
+            delete:
+              back: Voltar
+              confirm: Remover
+            sent:
+              back: Voltar
+              confirm: Enviar
+        new:
+          title: Novo anexo
+
+          confirm:
+            title: Deseja enviar o anexo?
+            body: Após o envio, o anexo não poderá ser alterado.
+          dialog:
+            back: Voltar
+            confirm: Enviar
+
+          button:
+            submit: Enviar
+            submitting: Enviando
+          form:
+            fields:
+              question_label: Anexo
+
+          notifications:
+            success: Anexo criado com sucesso
+            failure: Houve um erro ao criar o anexo
